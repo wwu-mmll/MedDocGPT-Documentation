@@ -1,0 +1,40 @@
+site_name: MedDocGPT Documentation
+
+# Theme configuration
+theme:
+  name: 'material'
+  palette:
+    primary: 'teal'
+    accent: 'teal'
+  font: false
+  features:
+     - toc.integrate
+
+
+# extensions
+markdown_extensions:
+  - pymdownx.arithmatex:
+        generic: true
+  - pymdownx.highlight:
+      auto_title: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - codehilite
+  - admonition
+  - pymdownx.details
+
+# Site structure
+nav:
+  - Home: "index.md"
+  - API:
+      - DummyTransformer: "api/DummyTransformer.md"
+
+extra_css:
+  - assets/stylesheets/material.css
+
+
